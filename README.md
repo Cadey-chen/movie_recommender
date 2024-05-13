@@ -10,3 +10,8 @@ of votes) to remove the bias where very few users gave a movie very high rating 
 Users can obtain a list of movies they like by supplying the program with a genre (e.g. Comedy, Family, Romance) and a parameter to 
 rank the movies by. The can pick between ranking by the movie's popularity (number of people who rated the movie), average user rating, 
 and a Bayesian average of the previous two measures.
+
+To see the program in action, please watch the video here!
+
+https://github.com/Cadey-chen/movie_recommender/assets/77594578/9a4fc209-ba3a-4557-be76-19569f188618
+
