@@ -1,19 +1,18 @@
 # Overview
 
-This movie recommender system is based on the TMDB Movies dataset from Kaggle. Since I love watching and appreciating films of different genres and time periods, the goal of this project is to leverage the TMDB movies database and Machine Learning techniques to create a dynamic system that recommends a list 
-of movies to users based on their unique tastes. As someone who loves watching and analying films from different genres and eras,
+This movie recommender system is based on the TMDB Movies dataset from Kaggle. Since I love watching and appreciating films of different genres and time periods, the goal of this project is to leverage the TMDB movies database and Machine Learning techniques to create a dynamic system that recommends a list of movies to users based on their unique tastes. As someone who loves watching and analying films from different genres and eras,
 a recommendation system powered by machine learning can help me decide the perfect movie to watch depending on my mood. I developed this 
 program in hopes that it can give users that exact movie they might want to watch at that specific moment.
 
-Data is first being processed so the genre and keywords fields can be used as parameters when recommending to the user. Then, the 
-original data is being filtered such that only movies with more than 34 votes is being considered (the 75% quantile of the number 
-of votes) to remove the bias where very few users gave a movie very high rating when we recommend based on average user ratings. 
+Here are the two Kaggle datasets I used to train my model:
 
-Users can obtain a list of movies they like by supplying the program with a genre (e.g. Comedy, Family, Romance) and a parameter to 
-rank the movies by. The can pick between ranking by the movie's popularity (number of people who rated the movie), average user rating, 
-and a Bayesian average of the previous two measures.
+1. The Movies Dataset by Rounak Banik: https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
+2. Full TMDB Movies Dataset 2024 (1M Movies) by asaniczka: https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies
 
-To see the program in action, please watch the video here!
+The two datasets are first being merged together to have a better range of movies covered. Then, the 
+original data is being filtered down with thresholds on votes_count since audience ratings can be somewhat unreliable when the vote base is too little. More processing are being done to standardize rows into suitable datatypes for further analysis. Stemming was being applied to the keywords to ensure that different forms of the same word are represented accurately. Moreover, irrelevant and outlier data were also carefully checked and filtered out of the base dataset. 
 
-https://github.com/Cadey-chen/movie_recommender/assets/77594578/9a4fc209-ba3a-4557-be76-19569f188618
+To understand the how these movies relate to one another, I applied the Frequency-Inverse Document Frequency (TF-IDF) vectorizer and cosine similarity to calculate the similarity between each movie's plot description and keywords string. In this process, I found the most challenging part to be accurately representing the overall tone and style of the movie with the given data, since solely using plot description and keywords string can sometimes lead to ill-suited results because of a specific word (such as an object that was important to the plot, or two movies both have a character with the same name). To mitigate this, the model also took other metadata values such as genres, production country, and ratings similarity into consideration, and the results are more generalized.
+
+
 
