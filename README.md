@@ -1,8 +1,7 @@
 # Overview
 
-This movie recommender system is based on the TMDB Movies dataset from Kaggle. Since I love watching and appreciating films of different genres and time periods, the goal of this project is to leverage the TMDB movies database and Machine Learning techniques to create a dynamic system that recommends a list of movies to users based on their unique tastes. As someone who loves watching and analying films from different genres and eras,
-a recommendation system powered by machine learning can help me decide the perfect movie to watch depending on my mood. I developed this 
-program in hopes that it can give users that exact movie they might want to watch at that specific moment.
+This movie recommender system is based on the TMDB Movies dataset from Kaggle. Since I love watching and appreciating films of different genres and time periods, the goal of this project is to leverage the TMDB movies database and Machine Learning techniques to create a dynamic system that recommends a list of movies to users based on their unique tastes. As an example use case, for someone who loves watching and analying films from different genres and eras,
+a recommendation system powered by machine learning can help me decide the perfect movie to watch depending on their mood. Using big data, this recommender system can also help users find those hidden gems they may have never heard of before but would be great fun to watch. 
 
 Here are the two Kaggle datasets I used to train my model:
 
